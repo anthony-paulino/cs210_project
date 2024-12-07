@@ -1,0 +1,116 @@
+Project Summary: NYC Collision Data Analysis and Prediction
+- This project aims to analyze and predict the severity of motor vehicle collisions in New York City using data-driven approaches.
+- By combining data engineering, machine learning, and an interactive user interface, the project provides insights and predictive capabilities
+  for collision severity based on user-defined inputs.
+---------------------------------------------------------------------------------------------------------------
+Requirements:
+The following libraries are required to run this project. Use the requirements.txt file to install dependencies.
+
+requirements.txt File Content:
+Installation: Run the following command in your terminal: pip install -r requirements.txt
+- if that doesn't work, try : pip3 install -r requirements.txt
+
+Additionally Files needed to be Installed that needed to be left out because of github 25 MB file capacity so they couldn't be included:
+Option 1:Run the following command in your terminal: python download_files.py 
+- if that doesn't work, try : python3 download_files.py 
+Option2: Download the files manually
+- place in data folder: "raw_dataset.csv": "https://drive.google.com/uc?id=1SWMhFU8jwGQJL2B4nxeofHhozATdEzj1",
+- place in data folder: "clean_collision_data.csv": "https://drive.google.com/uc?id=1pFQAJezt5h6rhP52L1Epb4ynurUNYwbD",
+- place in models folder: 'random_forest_model.pkl": "https://drive.google.com/uc?id=1BmcI8hAaIoBuIM3CuTxn_b0UPdu2N4Ep"
+---------------------------------------------------------------------------------------------------------------
+Part 1: Data Ingestion and Cleaning (script: data_cleaning.py)
+Description: This step involves ingesting raw collision data and cleaning it to ensure consistency and quality for downstream processes.
+
+Why It’s Important: Raw data often contains inconsistencies, missing values, and errors. Cleaning ensures the dataset is reliable for analysis and machine learning.
+
+Implementation:
+- Loaded data from CSV files into pandas DataFrames.
+- Addressed missing values and duplicates.
+- Standardized column names and data formats.
+
+Result: A cleaned and structured dataset ready for exploratory data analysis (EDA).
+---------------------------------------------------------------------------------------------------------------
+Part 2: EDA (Exploratory Data Analysis) (script: exploratory_data_analysis.py)
+Description: EDA involves examining the cleaned dataset to identify patterns, trends, and anomalies.
+
+Why It’s Important: Understanding the data distribution, relationships, and outliers is crucial for informed decision-making during feature engineering and modeling.
+
+Implementation:
+
+- Visualized data distributions using seaborn for numerical and categorical features.
+- Examined relationships between collision severity and contributing factors (e.g., time of day, vehicle type).
+- Identified class imbalance issues in severity categories.
+
+Result: Insights about the dataset structure and relationships guided feature engineering and modeling efforts.
+---------------------------------------------------------------------------------------------------------------
+Part 3: Feature Engineering (script: feature_engineering.py)
+Description: This step involves transforming raw data into meaningful features for machine learning.
+
+Why It’s Important: Good features improve model performance and interpretability. Addressing issues like class imbalance ensures fair model evaluation.
+
+Implementation:
+- Feature Selection: Selected key features like borough, time of day, contributing factor, vehicle category, latitude, and longitude.
+- One-Hot Encoding: Applied to categorical features to convert them into numerical format.
+- Severity Threshold Analysis: Performed to define thresholds for categorizing severity scores into "High," "Medium," and "Low."
+- Class imbalance was addressed to ensure equitable model performance across all severity categories and to mitigate biases caused by the overrepresentation of less severe collisions.
+
+Result: A balanced and meaningful feature set optimized for machine learning models.
+---------------------------------------------------------------------------------------------------------------
+Part 4: Database Integration (script: database_integration.py)
+Description: The project integrates an SQLite database to store collision data for querying and dynamic updates.
+
+Why It’s Important: A database provides efficient storage, retrieval, and management of large datasets.
+
+Implementation:
+- Designed relational tables for collisions, boroughs, and global statistics.
+- Populated the database with cleaned data.
+- Optimized SQL queries for dynamic filtering and statistical computation.
+
+Result: A robust and scalable data backend that supports the interactive application.
+---------------------------------------------------------------------------------------------------------------
+Part 5: Machine Learning (script: machine_learning.py)
+Description: Machine learning models were trained to classify collision severity based on input features.
+
+Why It’s Important: Predictive modeling enables actionable insights, such as identifying high-risk conditions for collisions.
+
+Implementation:
+- Class Imbalance Handling: Used SMOTE (Synthetic Minority Oversampling Technique) to address the underrepresentation of the features.
+- Modeling: Trained a Random Forest classifier and an XGBoost classifier.
+- Evaluation: Assessed models using classification reports, confusion matrices, and ROC-AUC scores.
+- Pipeline: Built a preprocessing pipeline for feature scaling and one-hot encoding to ensure consistent data transformation during training and prediction.
+
+Result: The Random Forest model was selected as the best-performing model, achieving high accuracy and interpretability.
+---------------------------------------------------------------------------------------------------------------
+Part 6: Interactive Interface (Streamlit Application) (script: app.py)
+Description: An interactive web application was built using Streamlit for dynamic analysis and predictions.
+
+Why It’s Important: The application makes the analysis accessible to users, allowing them to filter data and predict collision severity.
+
+Implementation:
+- Data Visualization: Displayed heatmaps of collision locations using folium.
+- Prediction Form: Included inputs for user-defined conditions like borough, time of day, latitude, and longitude.
+- Dynamic Updates: Incorporated SQL-driven real-time updates for user statistics and map visualization.
+---------------------------------------------------------------------------------------------------------------
+How to Run the Application:
+
+1. Navigate to the project directory.
+2. Run the following command: streamlit run app.py
+
+Optional: Without navigating to th project directory, you can run the following command: streamlit run path_to_project/app.py
+
+Next: it should automatically open th webpage of the application but if it doesn't you can open the provided Local URL that is displayed in the terminal, 
+Result: A user-friendly application enabling collision severity predictions and insightful visualizations.
+
+Conclusion: 
+This project demonstrates the power of combining data engineering, machine learning, and a database to provide an interactive visualization for analyzing and predicting NYC collision data. It offers valuable insights for decision-makers and enhances public safety awareness.
+---------------------------------------------------------------------------------------------------------------
+Further Analysis Conducted (unexpectedly happen but can fall under the EDA Step) :
+The features_analysis folder contains detailed exploratory and diagnostic analyses conducted during feature engineering:
+Severity Score Analysis: Explored the distribution and trends of severity scores in the dataset to understand collision impacts.
+Severity Threshold Analysis: Evaluated and fine-tuned thresholds for categorizing severity scores into Low, Medium, and High categories to ensure meaningful groupings.
+Class Imbalance Analysis: Assessed the distribution of classes (severity categories) to design balancing techniques like downsampling and SMOTE.
+
+Models and Encoders:
+The models and encoder folder contains the saved machine learning models (Random Forest and XGBoost) and encoders used for collision severity prediction. 
+The models and encoders are stored as .pkl files to facilitate reuse and integration into the Streamlit application.
+---------------------------------------------------------------------------------------------------------------

@@ -147,7 +147,6 @@ Created an accessible tool for exploring collision data and generating predictio
 3. Run Script `feature_engineering.py`
 4. Run Script `data_integration.py`
 5. Run Script `machine_learning.py`
-5. Run Script `machine_learning.py`
 6. Run Command In Terminal: `streamlit run app.py`
 
 ### Conclusion

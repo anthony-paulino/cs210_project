@@ -27,9 +27,9 @@ Some required files are excluded from the repository due to size constraints. Us
    ```
 
 2. **Manual Download:**
-   - Save **`raw_dataset.csv`** to the `data/` folder: [Download Link](https://drive.google.com/uc?id=1SWMhFU8jwGQJL2B4nxeofHhozATdEzj1)
-   - Save **`clean_collision_data.csv`** to the `data/` folder: [Download Link](https://drive.google.com/uc?id=1pFQAJezt5h6rhP52L1Epb4ynurUNYwbD)
-   - Save **`random_forest_model.pkl`** to the `models/` folder: [Download Link](https://drive.google.com/uc?id=1BmcI8hAaIoBuIM3CuTxn_b0UPdu2N4Ep)
+   - Save **`raw_dataset.csv`** to the `data/` folder: [Download Link](https://drive.google.com/uc?id=15QJIa6AxucXFIwCEITNL_uioh8cEj8Er)
+   - Save **`clean_collision_data.csv`** to the `data/` folder: [Download Link](https://drive.google.com/uc?id=12YVvDoTXSMhq65jYXiDpLW0pvLY-J8M1)
+   - Save **`random_forest_model.pkl`** to the `models/` folder: [Download Link](https://drive.google.com/uc?id=1dwqypIt_eLYZM1tM8UR7g7HBuwxy17df)
 
 ---
 

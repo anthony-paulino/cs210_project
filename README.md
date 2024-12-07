@@ -142,7 +142,7 @@ Created an accessible tool for exploring collision data and generating predictio
 3. If the webpage doesn't open automatically, use the local URL provided in the terminal.  
 ---
 ### Execution Steps from start to finish (May Take A While For Each Step):
-1. Ensure you have the required file from [REQUIRED FILES](#important-additional-files-required) and that `data/collision_data.db` is deleted.
+1. Ensure you have the [required files](#important-additional-files-required) and that `data/collision_data.db` is deleted.
 2. Run Script `data_cleaning.py`
 3. Run Script `feature_engineering.py`
 4. Run Script `data_integration.py`

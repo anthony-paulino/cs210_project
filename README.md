@@ -11,7 +11,7 @@ The following libraries are required to run this project. Use the `requirements.
 
 ```bash
 pip install -r requirements.txt
-# Alternatively, if pip fails:
+# Alternatively:
 pip3 install -r requirements.txt
 ```
 

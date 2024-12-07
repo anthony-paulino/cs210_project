@@ -33,5 +33,7 @@ def check_and_download_file(filepath, url):
         print(f"{os.path.basename(filepath)} is already available at {filepath}.")
 
 if __name__ == "__main__":
-    download_files(FILES[:2])
-    download_files(FILES[2:],"models")
+    files_data = {k: FILES[k] for i, k in enumerate(FILES) if i < 2} 
+    files_models = {k: FILES[k] for i, k in enumerate(FILES) if i >= 2} 
+    download_files(files_data) 
+    download_files(files_models, "models")

@@ -1,7 +1,7 @@
 ### Motor Vehicle Collision Severity Prediction in NYC
 
 **Project Definition:**  
-This project aims to develop a predictive model for motor vehicle collisions in NYC, aiming to identify high-risk zones and assess the severity of incidents. By analyzing historical collision data, the model can help public safety and transportation officials in their preventive measures to reduce accidents and make their city safer for vehicle motorists.
+This project aims to develop a predictive model for motor vehicle collisions in NYC, aiming to identify high-risk zones and assess the severity of incidents. By analyzing historical collision data, the model can help public safety and transportation officials in their preventive measures to reduce accidents and make their city safer for vehicle motorists.  
 
 ---
 
@@ -30,6 +30,10 @@ Some required files are excluded from the repository due to size constraints. Us
    - Save **`raw_dataset.csv`** to the `data/` folder: [Download Link](https://drive.google.com/uc?id=15QJIa6AxucXFIwCEITNL_uioh8cEj8Er)
    - Save **`clean_collision_data.csv`** to the `data/` folder: [Download Link](https://drive.google.com/uc?id=12YVvDoTXSMhq65jYXiDpLW0pvLY-J8M1)
    - Save **`random_forest_model.pkl`** to the `models/` folder: [Download Link](https://drive.google.com/uc?id=1dwqypIt_eLYZM1tM8UR7g7HBuwxy17df)
+
+---
+
+### [VIDEO DEMO](https://drive.google.com/file/d/1I_Z4Wpd-4El7hDiK2RPrjh9OdP5AH2W1/view?usp=drive_link)
 
 ---
 
@@ -166,7 +170,3 @@ This project showcases the integration of data engineering, machine learning, an
 **Models and Encoders:**  
 - Stored machine learning models (`random_forest_model.pkl`, `xgboost_model.pkl`) and preprocessing encoders for reuse.  
 - Accessible through the Streamlit application for predictions.  
-
---
-
-### [VIDEO DEMO](https://drive.google.com/file/d/1I_Z4Wpd-4El7hDiK2RPrjh9OdP5AH2W1/view?usp=drive_link)

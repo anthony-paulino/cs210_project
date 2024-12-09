@@ -160,8 +160,13 @@ This project showcases the integration of data engineering, machine learning, an
 **Extended EDA (Features Analysis):**  
 - **Severity Score Analysis:** Assessed patterns in collision impacts.  
 - **Threshold Optimization:** Defined boundaries for severity categories (Low, Medium, High).  
-- **Class Imbalance Resolution:** Balanced severity categories through downsampling and SMOTE.  
+- **Class Imbalance Resolution:** Balanced severity categories through downsampling and SMOTE.
+- 
 
 **Models and Encoders:**  
 - Stored machine learning models (`random_forest_model.pkl`, `xgboost_model.pkl`) and preprocessing encoders for reuse.  
 - Accessible through the Streamlit application for predictions.  
+
+--
+
+### [VIDEO DEMO](https://drive.google.com/file/d/1I_Z4Wpd-4El7hDiK2RPrjh9OdP5AH2W1/view?usp=drive_link)

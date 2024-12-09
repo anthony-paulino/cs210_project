@@ -5,18 +5,19 @@ Project Summary: NYC Collision Data Analysis and Prediction
 ---------------------------------------------------------------------------------------------------------------
 Requirements:
 The following libraries are required to run this project. Use the requirements.txt file to install dependencies.
+There are also additional required files that need to be downloaded.
 
-requirements.txt File Content:
+requirements.txt File:
 Installation: Run the following command in your terminal: pip install -r requirements.txt
 - if that doesn't work, try : pip3 install -r requirements.txt
 
-Additionally Files needed to be Installed that needed to be left out because of github 25 MB file capacity so they couldn't be included:
+Additional Required Files Need to be Downloaded: Some required files are excluded from the repository due to size constraints: 
 Option 1:Run the following command in your terminal: python download_files.py 
 - if that doesn't work, try : python3 download_files.py 
 Option2: Download the files manually
-- place in data folder: "raw_dataset.csv": "https://drive.google.com/uc?id=1SWMhFU8jwGQJL2B4nxeofHhozATdEzj1",
-- place in data folder: "clean_collision_data.csv": "https://drive.google.com/uc?id=1pFQAJezt5h6rhP52L1Epb4ynurUNYwbD",
-- place in models folder: 'random_forest_model.pkl": "https://drive.google.com/uc?id=1BmcI8hAaIoBuIM3CuTxn_b0UPdu2N4Ep"
+- place in data folder: "raw_dataset.csv": "https://drive.google.com/uc?id=15QJIa6AxucXFIwCEITNL_uioh8cEj8Er",
+- place in data folder: "clean_collision_data.csv": "https://drive.google.com/uc?id=12YVvDoTXSMhq65jYXiDpLW0pvLY-J8M1",
+- place in models folder: 'random_forest_model.pkl": "https://drive.google.com/uc?id=1dwqypIt_eLYZM1tM8UR7g7HBuwxy17df"
 ---------------------------------------------------------------------------------------------------------------
 Part 1: Data Ingestion and Cleaning (script: data_cleaning.py)
 Description: This step involves ingesting raw collision data and cleaning it to ensure consistency and quality for downstream processes.

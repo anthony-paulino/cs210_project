@@ -44,14 +44,12 @@ Implementation:
 Result: Insights about the dataset structure and relationships guided feature engineering and modeling efforts.
 ---------------------------------------------------------------------------------------------------------------
 Part 3: Feature Engineering (script: feature_engineering.py)
-Description: This step involves transforming raw data into meaningful features for machine learning.
+Description: This step involves transforming clean data into meaningful features for machine learning.
 
 Why It’s Important: Good features improve model performance and interpretability. Addressing issues like class imbalance ensures fair model evaluation.
 
 Implementation:
 - Feature Selection: Selected key features like borough, time of day, contributing factor, vehicle category, latitude, and longitude.
-- One-Hot Encoding: Applied to categorical features to convert them into numerical format.
-- Severity Threshold Analysis: Performed to define thresholds for categorizing severity scores into "High," "Medium," and "Low."
 - Class imbalance was addressed to ensure equitable model performance across all severity categories and to mitigate biases caused by the overrepresentation of less severe collisions.
 
 Result: A balanced and meaningful feature set optimized for machine learning models.

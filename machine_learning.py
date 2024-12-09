@@ -54,10 +54,6 @@ print("\n--- Encoding Severity Category ---")
 label_encoder = LabelEncoder()
 df['severity_category_encoded'] = label_encoder.fit_transform(df['severity_category'])
 
-# Display the mapping of severity categories for reference
-severity_mapping = dict(zip(label_encoder.classes_, label_encoder.transform(label_encoder.classes_)))
-print("Severity category mapping:", severity_mapping)
-
 # Step 3: Define features and target variable
 # Features (X) exclude the original and encoded target variables
 X = df.drop(columns=['severity_category', 'severity_category_encoded'])

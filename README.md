@@ -69,14 +69,14 @@ Gained insights to guide dataset cleaning, feature selection, and preprocessing.
 **Script:** `feature_engineering.py`  
 
 **Purpose:**  
-Transform raw data into meaningful features to enhance model performance and interpretability.  
+Transform clean data to include meaningful features to enhance model performance and interpretability.  
 
 **Key Actions:**  
 - **Severity Score:** Weighted injuries and fatalities to differentiate collision impacts.  
 - **Temporal Features:** Extracted day of the week, time of day, and month.  
 - **Spatial Features:** Incorporated location grids and collision clustering (DBSCAN).  
 - **Categorical Simplification:** Grouped vehicle types and contributing factors into broader, interpretable categories.  
-- **Class Imbalance Handling:** Addressed imbalance through downsampling and SMOTE.  
+- **Class Imbalance Handling:** Addressed imbalance through downsampling.  
 
 **Result:**  
 Produced a feature-rich dataset tailored for machine learning models.

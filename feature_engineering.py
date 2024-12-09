@@ -1,4 +1,3 @@
-# Import necessary libraries
 import pandas as pd
 from sklearn.cluster import DBSCAN
 import numpy as np
@@ -8,18 +7,19 @@ from download_files import check_and_download_file
 ''' 
 -- Feature Engineering --
 -------------------------
-Feature Selection:
-The selected features were chosen to capture the most critical aspects influencing motor vehicle collisions, aligning with the objectives of predicting collision risk and severity:
+Feature Selection: 
+Transform clean data to include meaningful features to enhance model performance and interpretability.
+The selected features were chosen to capture the most critical aspects influencing motor vehicle collisions.
 
-- **Severity Score**: Provides a numerical measure of collision severity by weighting injuries and fatalities. Helps the model differentiate between minor collisions and severe accidents.
+- **Severity Score**: Provides a numerical measure of collision severity by weighting injuries and fatalities.
 
-- **Day of Week, Hour of Day, Time of Day, Month**: Temporal patterns are critical in understanding when collisions are more likely to occur. For instance, certain days (e.g., weekends) and times (e.g., rush hours) are riskier.
+- **Day of Week, Hour of Day, Time of Day, and Month**: Introduced temporal patterns to better identify when collisions are more likely to occur.
 
-- **Vehicle Category**: Groups vehicle types into manageable categories (e.g., Passenger Vehicle, Heavy Vehicle). Different vehicle categories may have distinct risks and collision patterns.
+- **Vehicle Type Category**: Groups vehicle types into manageable categories (e.g., Passenger Vehicle, Heavy Vehicle). Different vehicle categories may have distinct risks and collision patterns.
 
-- **Contributing Factor Category**: Maps the contributing factor to broader categories like Human Error, Environmental Conditions, and Mechanical Failure. This simplifies the complexity of collision causes and enhances model interpretability.
+- **Contributing Factor Category**: Maps the contributing factor to broader categories like Human Error, Environmental Conditions, and Mechanical Failure.
 
-- **Location Grid and Collision Cluster**: Captures spatial patterns in the data, enabling analysis of high-risk zones and collision density hotspots.
+- **Location Grid and Collision Cluster**: Captures spatial patterns in the data, enabling to identify high-risk zones and collision hotspots.
 
 Class Imbalance:
 Class imbalance was addressed to ensure equitable model performance across all severity categories and to mitigate biases caused by the overrepresentation of less severe collisions.

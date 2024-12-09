@@ -7,7 +7,7 @@ from download_files import check_and_download_file
 -----------------------------------
 Purpose:
 1. Load and inspect raw motor vehicle collision data.
-2. Perform data cleaning to prepare the dataset for further analysis and modeling.
+2. Perform data cleaning to prepare the dataset for further analysis and feature engineering.
 
 Key Cleaning Steps:
 1. Handle duplicate records to avoid redundant data.
@@ -46,7 +46,7 @@ print("Basic Information:")
 print(df.info())  # Overview of data types and non-null counts
 
 print("\nSummary Statistics:")
-print(df.describe())  # Summary statistics for numerical columns
+print(df.describe())  # Summary statistics
 
 # Step 3: Handle Duplicates
 print("\n--- Handling Duplicates ---")
